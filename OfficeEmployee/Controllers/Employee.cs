@@ -16,7 +16,7 @@ namespace OfficeEmployee.Controllers
         public ActionResult EmployeeList()
         {
             OfficeEmployee.Services.EmployeeList empList = new OfficeEmployee.Services.EmployeeList();
-            //return PartialView("Employee/_EmployeeList", empList.GetUserList()); // this is rest Suraj
+            //return PartialView("Employee/_EmployeeList", empList.GetUserList()); // Removing Comments
             return View(empList.GetUserList());
         }
     }

@@ -1,0 +1,121 @@
+﻿@{
+    ViewBag.Title = "Login";
+}
+@model OfficeEmployee.Models.UserLogin.LoginModel
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const video = document.getElementById("video");
+        const startButton = document.getElementById("startButton");
+
+        startButton.addEventListener("click", () => {
+            document.getElementById("divCamera").style.display = "block";
+            navigator.mediaDevices.getUserMedia({ video: true })
+                .then((stream) => {
+                    video.srcObject = stream;
+                })
+                .catch((error) => {
+                    console.error("Error accessing the camera: ", error);
+                });
+        });
+    });
+    function HideCamera() {
+        document.getElementById('divCamera').style.display = 'none';
+    }
+</script>
+
+<div class="jumbotron">
+    <h1>Login</h1>
+</div>
+
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-12">
+
+            <button id="startButton">Start Camera</button>
+            <div class="row">
+
+                @using (Html.BeginForm())
+                {
+                    <div class="col-md-8 mx-auto">
+                        <!-- form card login -->
+                        <div class="form">
+                            @Html.ValidationSummary(true, "Login was unsuccessful. Please correct the errors and try again.")
+                        </div>
+                        <div class="card  rounded-2">
+                            <div class="card-body">
+                                <div style="float:left">
+                                    <div class="form-group">
+                                        @Html.LabelFor(m => m.UserName)
+                                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control form-control-lg rounded-2", @required = true })
+                                        @Html.ValidationMessageFor(m => m.UserName)
+
+                                    </div>
+                                    <div class="form-group">
+                                        @Html.LabelFor(m => m.Password)
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control form-control-lg rounded-2", @required = true })
+                                        @Html.ValidationMessageFor(m => m.Password)
+                                    </div>
+                                    <div class="clear"></div>
+                                    <button type="submit" class="btn btn-success btn-lg float-right" id="btnLogin">Login</button>
+                                    <div class="clear"></div>
+                                    <div class="float-right">
+                                        <a href="javascript:ResetPassword()">Forgot Password</a>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="clear"></div>
+                                    <div class="float-right">
+                                        <details>
+                                            <summary># Click to read important Notice</summary>
+                                            <p>
+                                                Please make sure that the username and password input are correct. If you login attempts are unsuccessful, then after the 5th attempt, you will be locked out.
+
+                                            </p>
+                                        </details>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="float-right">
+
+                                        <input type="color" />
+                                        <input type="date" />
+                                        <input type="time" />
+                                        <input type="range" />
+                                        <input type="search" />
+                                        <input type="week" />
+                                        <input type="number" />
+                                    </div>
+
+
+
+
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                <div id="divCamera" style="display:none;">
+                    <video id="video" autoplay style="width: 300px; object-fit: cover;"></video><br /><a href="javascript:HideCamera()">Hide</a>
+                </div>
+            </div>
+            <!--/row-->
+        </div>
+        <!--/col-->
+    </div>
+    <!--/row-->
+</div>
+<div class="clear"></div>
+<div>
+    <label for="datalist-city">
+        Which City are you from?
+    </label>
+    <input list="datalist-cities" id="datalist-city" name="datalist-city" />
+    <datalist id="datalist-cities">
+        <option values="kathmandu">kathmandu</option>
+        <option values="Pokhara">Pokhara</option>
+        <option values="Balaju">Balaju</option>
+        <option values="Patan">Patan</option>
+    </datalist>
+
+</div>

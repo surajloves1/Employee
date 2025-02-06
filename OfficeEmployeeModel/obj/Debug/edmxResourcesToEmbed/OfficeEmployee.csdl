@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="employeeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <ComplexType Name="GetProductCode_Result">
+    <Property Name="ProductCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModelPrefix" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Specification" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="GroupCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="ManufacturerCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CategoryCode" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="PartNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CurrentGrade" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </ComplexType>
+  <ComplexType Name="GetWeekNumberStartEndDate_Result">
+    <Property Name="WeekOfMonth" Type="Int64" />
+    <Property Name="Week" Type="Int32" />
+    <Property Name="WeekStart" Type="DateTime" />
+    <Property Name="WeekEnd" Type="DateTime" />
+    <Property Name="WeekFrmTo" Type="String" MaxLength="11" FixedLength="false" Unicode="false" />
+  </ComplexType>
+  <ComplexType Name="SplitString_Custom_Result">
+    <Property Name="Item" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </ComplexType>
+  <ComplexType Name="ufn_CSVToTable_Result">
+    <Property Name="String" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </ComplexType>
+  <EntityType Name="C__RefactorLog">
+    <Key>
+      <PropertyRef Name="OperationKey" />
+    </Key>
+    <Property Name="OperationKey" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="56" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="webpages_Roles" Relationship="Self.webpages_UsersInRoles" FromRole="UserProfile" ToRole="webpages_Roles" />
+    <NavigationProperty Name="Detail_Employee" Relationship="employeeModel.FK_Detail_Employee_UserProfile" FromRole="UserProfile" ToRole="Detail_Employee" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Precision="3" />
+    <Property Name="ConfirmationToken" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="IsConfirmed" Type="Boolean" />
+    <Property Name="LastPasswordFailureDate" Type="DateTime" Precision="3" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="Int32" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PasswordChangedDate" Type="DateTime" Precision="3" />
+    <Property Name="PasswordSalt" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PasswordVerificationToken" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProviderUserId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="UserProfiles" Relationship="Self.webpages_UsersInRoles" FromRole="webpages_Roles" ToRole="UserProfile" />
+  </EntityType>
+  <Association Name="webpages_UsersInRoles">
+    <End Role="webpages_Roles" Type="Self.webpages_Roles" Multiplicity="*" />
+    <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="employeeEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__RefactorLog" EntityType="Self.C__RefactorLog" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="UserProfiles" EntityType="Self.UserProfile" />
+    <EntitySet Name="webpages_Membership" EntityType="Self.webpages_Membership" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="Self.webpages_OAuthMembership" />
+    <EntitySet Name="webpages_Roles" EntityType="Self.webpages_Roles" />
+    <AssociationSet Name="webpages_UsersInRoles" Association="Self.webpages_UsersInRoles">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+    </AssociationSet>
+    <FunctionImport Name="GetProductCode" IsComposable="true" ReturnType="Collection(employeeModel.GetProductCode_Result)">
+      <Parameter Name="iPlanID" Mode="In" Type="Int32" />
+      <Parameter Name="ManufacturerID" Mode="In" Type="Int32" />
+      <Parameter Name="ManufacturerCode" Mode="In" Type="String" />
+      <Parameter Name="CategoryID" Mode="In" Type="Int32" />
+      <Parameter Name="ModelNumber" Mode="In" Type="String" />
+      <Parameter Name="FunctionalStatus" Mode="In" Type="String" />
+      <Parameter Name="Grade" Mode="In" Type="String" />
+      <Parameter Name="BuildAttributes" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="GetWeekNumberStartEndDate" IsComposable="true" ReturnType="Collection(employeeModel.GetWeekNumberStartEndDate_Result)">
+      <Parameter Name="fromdate" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SplitString_Custom" IsComposable="true" ReturnType="Collection(employeeModel.SplitString_Custom_Result)">
+      <Parameter Name="String" Mode="In" Type="String" />
+      <Parameter Name="Delimiter" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="ufn_CSVToTable" IsComposable="true" ReturnType="Collection(employeeModel.ufn_CSVToTable_Result)">
+      <Parameter Name="StringInput" Mode="In" Type="String" />
+      <Parameter Name="Delimiter" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="Detail_Employee" EntityType="employeeModel.Detail_Employee" />
+    <AssociationSet Name="FK_Detail_Employee_UserProfile" Association="employeeModel.FK_Detail_Employee_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+      <End Role="Detail_Employee" EntitySet="Detail_Employee" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Detail_Employee">
+    <Key>
+      <PropertyRef Name="iEmployeeID" />
+    </Key>
+    <Property Name="iEmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vEmployeeName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="vEmployeeFunction" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cEmployeeStatus" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="vEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="vManagerID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dHireDate" Type="DateTime" Precision="3" />
+    <Property Name="vNotes" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="bAccessFromAnywhere" Type="Boolean" Nullable="false" />
+    <Property Name="iSourceID" Type="Int32" />
+    <Property Name="vEmployeePhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vEmployeeMobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vEmployeeFax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vAlternateContactEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="bCopyeMailsToAltContact" Type="Boolean" Nullable="false" />
+    <Property Name="bCopyJobeMailsToSourceAltContact" Type="Boolean" Nullable="false" />
+    <Property Name="bIsLandingPage" Type="Boolean" Nullable="false" />
+    <Property Name="iFacilityID" Type="Int32" Nullable="false" />
+    <Property Name="bIsPrimaryGM" Type="Boolean" />
+    <Property Name="iWebUserID" Type="Int32" Nullable="false" />
+    <Property Name="bRequirePasswordChange" Type="Boolean" />
+    <Property Name="bSendEmail" Type="Boolean" />
+    <Property Name="bEmailSent" Type="Boolean" />
+    <Property Name="bClientApproval" Type="Boolean" />
+    <Property Name="vTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="vGoogleEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="vSkypeName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="vPhoneExtension" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="iComPlanID1" Type="Int32" />
+    <Property Name="iComPlanID2" Type="Int32" />
+    <Property Name="iComPlanID3" Type="Int32" />
+    <Property Name="yAnualThreshold" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="vAddress" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="bNotifyOnUploadDocument" Type="Boolean" />
+    <Property Name="vLocationIDProduction" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="vLocationIDHarvest" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+    <Property Name="bSendJobNotification" Type="Boolean" />
+    <NavigationProperty Name="UserProfile" Relationship="employeeModel.FK_Detail_Employee_UserProfile" FromRole="Detail_Employee" ToRole="UserProfile" />
+  </EntityType>
+  <Association Name="FK_Detail_Employee_UserProfile">
+    <End Type="employeeModel.UserProfile" Role="UserProfile" Multiplicity="1" />
+    <End Type="employeeModel.Detail_Employee" Role="Detail_Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Detail_Employee">
+        <PropertyRef Name="iWebUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

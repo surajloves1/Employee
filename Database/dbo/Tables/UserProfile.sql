@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[UserProfile] (
+    [UserId]   INT           IDENTITY (1, 1) NOT NULL,
+    [UserName] NVARCHAR (56) NOT NULL,
+    PRIMARY KEY CLUSTERED ([UserId] ASC) WITH (FILLFACTOR = 80),
+    UNIQUE NONCLUSTERED ([UserName] ASC) WITH (FILLFACTOR = 80)
+);
+

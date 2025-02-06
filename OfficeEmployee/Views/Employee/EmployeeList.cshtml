@@ -1,0 +1,43 @@
+﻿@model IEnumerable<OfficeEmployeeModel.Detail_Employee>
+@{
+    ViewBag.Title = "Employee List";
+}
+<style type="text/css">
+    .grid {
+        margin: 4px;
+        border-collapse: collapse;
+        width: 600px;
+    }
+
+    .grid th, .grid td {
+        border: 1px solid #C0C0C0;
+        padding: 5px;
+    }
+
+    .head {
+        background-color: #C0C0C0;
+        font-weight: bold;
+        color: #737ab7;
+    }
+
+    .rowstyle {
+        background-color: #edeeee;
+        color: #000;
+    }
+    .alt {
+        background-color: #eff3d3;
+        color: #000;
+    }
+    .col-sm {
+        width: 350px;
+        min-width: 90px;
+    }
+    .canSortStyle {
+        color: #737ab7;
+    }
+</style>
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+<div>
+    @Html.Partial("Employee/_EmployeeList", Model)
+</div>

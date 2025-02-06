@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="employeeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__RefactorLog">
+    <Key>
+      <PropertyRef Name="OperationKey" />
+    </Key>
+    <Property Name="OperationKey" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Detail_Employee">
+    <Key>
+      <PropertyRef Name="iEmployeeID" />
+    </Key>
+    <Property Name="iEmployeeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vEmployeeName" Type="varchar" MaxLength="100" />
+    <Property Name="vEmployeeFunction" Type="varchar" MaxLength="50" />
+    <Property Name="cEmployeeStatus" Type="char" MaxLength="10" />
+    <Property Name="vEmail" Type="varchar" MaxLength="200" />
+    <Property Name="vManagerID" Type="varchar" MaxLength="50" />
+    <Property Name="dHireDate" Type="datetime" />
+    <Property Name="vNotes" Type="varchar" MaxLength="200" />
+    <Property Name="bAccessFromAnywhere" Type="bit" Nullable="false" />
+    <Property Name="iSourceID" Type="int" />
+    <Property Name="vEmployeePhone" Type="varchar" MaxLength="50" />
+    <Property Name="vEmployeeMobile" Type="varchar" MaxLength="50" />
+    <Property Name="vEmployeeFax" Type="varchar" MaxLength="50" />
+    <Property Name="vAlternateContactEmail" Type="varchar" MaxLength="100" />
+    <Property Name="bCopyeMailsToAltContact" Type="bit" Nullable="false" />
+    <Property Name="bCopyJobeMailsToSourceAltContact" Type="bit" Nullable="false" />
+    <Property Name="bIsLandingPage" Type="bit" Nullable="false" />
+    <Property Name="iFacilityID" Type="int" Nullable="false" />
+    <Property Name="bIsPrimaryGM" Type="bit" />
+    <Property Name="iWebUserID" Type="int" Nullable="false" />
+    <Property Name="bRequirePasswordChange" Type="bit" />
+    <Property Name="bSendEmail" Type="bit" />
+    <Property Name="bEmailSent" Type="bit" />
+    <Property Name="bClientApproval" Type="bit" />
+    <Property Name="vTitle" Type="varchar" MaxLength="50" />
+    <Property Name="vGoogleEmail" Type="varchar" MaxLength="200" />
+    <Property Name="vSkypeName" Type="varchar" MaxLength="200" />
+    <Property Name="vPhoneExtension" Type="varchar" MaxLength="20" />
+    <Property Name="iComPlanID1" Type="int" />
+    <Property Name="iComPlanID2" Type="int" />
+    <Property Name="iComPlanID3" Type="int" />
+    <Property Name="yAnualThreshold" Type="money" />
+    <Property Name="vAddress" Type="varchar" MaxLength="200" />
+    <Property Name="bNotifyOnUploadDocument" Type="bit" />
+    <Property Name="vLocationIDProduction" Type="varchar" MaxLength="75" />
+    <Property Name="vLocationIDHarvest" Type="varchar" MaxLength="75" />
+    <Property Name="bSendJobNotification" Type="bit" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="UserProfile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="56" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="ConfirmationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsConfirmed" Type="bit" />
+    <Property Name="LastPasswordFailureDate" Type="datetime" />
+    <Property Name="PasswordFailuresSinceLastSuccess" Type="int" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="PasswordChangedDate" Type="datetime" />
+    <Property Name="PasswordSalt" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="PasswordVerificationToken" Type="nvarchar" MaxLength="128" />
+    <Property Name="PasswordVerificationTokenExpirationDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="webpages_OAuthMembership">
+    <Key>
+      <PropertyRef Name="Provider" />
+      <PropertyRef Name="ProviderUserId" />
+    </Key>
+    <Property Name="Provider" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="ProviderUserId" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="webpages_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Detail_Employee_UserProfile">
+    <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="1" />
+    <End Role="Detail_Employee" Type="Self.Detail_Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Detail_Employee">
+        <PropertyRef Name="iWebUserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_RoleId">
+    <End Role="webpages_Roles" Type="Self.webpages_Roles" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="Self.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="webpages_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_UserId">
+    <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="1" />
+    <End Role="webpages_UsersInRoles" Type="Self.webpages_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="webpages_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="AddBusinessDays" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="date">
+    <Parameter Name="Date" Type="date" Mode="In" />
+    <Parameter Name="n" Type="int" Mode="In" />
+  </Function>
+  <Function Name="DateAddExcludeWeekEndDays" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="datetime">
+    <Parameter Name="addDate" Type="date" Mode="In" />
+    <Parameter Name="numDays" Type="int" Mode="In" />
+  </Function>
+  <Function Name="FN_ADD_WORKING_DAYS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="date">
+    <Parameter Name="DATE" Type="date" Mode="In" />
+    <Parameter Name="NDAYS" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fn_BuildModelDescription" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="iScanID" Type="int" Mode="In" />
+    <Parameter Name="cAuditOrFinal" Type="char" Mode="In" />
+  </Function>
+  <Function Name="FN_DayDiffExcludeWeekend" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="startdate" Type="date" Mode="In" />
+    <Parameter Name="enddate" Type="date" Mode="In" />
+  </Function>
+  <Function Name="fn_GetAuditReportDueDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="IJobID" Type="int" Mode="In" />
+    <Parameter Name="iAuditReportDueIn" Type="int" Mode="In" />
+    <Parameter Name="ReceivingDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="FN_GetOverallGrade" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="FunctionalStatus" Type="varchar" Mode="In" />
+    <Parameter Name="Grade" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="fn_GetProcessingDeadline" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="AllowedSubstractDays" Type="int" Mode="In" />
+    <Parameter Name="AuditReportDueDeadline" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="FN_WorkTime" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="bigint">
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="FinishDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetDayOfWeekDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="date">
+    <Parameter Name="WeekNumber" Type="int" Mode="In" />
+    <Parameter Name="Year" Type="int" Mode="In" />
+    <Parameter Name="DayOfWeek" Type="int" Mode="In" />
+  </Function>
+  <Function Name="getNumericValue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="inputString" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetProductCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="iPlanID" Type="int" Mode="In" />
+    <Parameter Name="ManufacturerID" Type="int" Mode="In" />
+    <Parameter Name="ManufacturerCode" Type="varchar" Mode="In" />
+    <Parameter Name="CategoryID" Type="int" Mode="In" />
+    <Parameter Name="ModelNumber" Type="varchar" Mode="In" />
+    <Parameter Name="FunctionalStatus" Type="varchar" Mode="In" />
+    <Parameter Name="Grade" Type="varchar" Mode="In" />
+    <Parameter Name="BuildAttributes" Type="bit" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="ProductCode" Type="varchar" MaxLength="100" />
+          <Property Name="ModelPrefix" Type="varchar" MaxLength="100" />
+          <Property Name="Specification" Type="varchar" MaxLength="100" />
+          <Property Name="GroupCode" Type="varchar" MaxLength="100" />
+          <Property Name="CategoryID" Type="int" />
+          <Property Name="ManufacturerCode" Type="varchar" MaxLength="50" />
+          <Property Name="CategoryCode" Type="varchar" MaxLength="2" />
+          <Property Name="PartNumber" Type="varchar" MaxLength="50" />
+          <Property Name="CurrentGrade" Type="varchar" MaxLength="10" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="getSKUCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="char" />
+  <Function Name="GetSSCCCode" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="OrderID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetStringParts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="nvarchar">
+    <Parameter Name="SplittedString" Type="nvarchar" Mode="In" />
+    <Parameter Name="Part" Type="int" Mode="In" />
+    <Parameter Name="SplitChar" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="GetWeekEndDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="date">
+    <Parameter Name="WeekNumber" Type="int" Mode="In" />
+    <Parameter Name="Year" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetWeekNumberStartEndDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="fromdate" Type="varchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="WeekOfMonth" Type="bigint" />
+          <Property Name="Week" Type="int" />
+          <Property Name="WeekStart" Type="date" />
+          <Property Name="WeekEnd" Type="date" />
+          <Property Name="WeekFrmTo" Type="varchar" MaxLength="11" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="GetWeekStartDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="date">
+    <Parameter Name="WeekNumber" Type="int" Mode="In" />
+    <Parameter Name="Year" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetWorkingHours" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="bigint">
+    <Parameter Name="StartDate" Type="datetime" Mode="In" />
+    <Parameter Name="FinishDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="ProperCase" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="varchar">
+    <Parameter Name="Text" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SplitString_Custom" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="String" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Delimiter" Type="char" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="Item" Type="nvarchar(max)" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <Function Name="ufn_CSVToTable" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="StringInput" Type="varchar" Mode="In" />
+    <Parameter Name="Delimiter" Type="nvarchar" Mode="In" />
+    <ReturnType>
+      <CollectionType>
+        <RowType>
+          <Property Name="String" Type="varchar" MaxLength="255" />
+        </RowType>
+      </CollectionType>
+    </ReturnType>
+  </Function>
+  <EntityContainer Name="employeeModelStoreContainer">
+    <EntitySet Name="__RefactorLog" EntityType="Self.__RefactorLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Detail_Employee" EntityType="Self.Detail_Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserProfile" EntityType="Self.UserProfile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="webpages_Membership" EntityType="Self.webpages_Membership" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="webpages_OAuthMembership" EntityType="Self.webpages_OAuthMembership" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="webpages_Roles" EntityType="Self.webpages_Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="webpages_UsersInRoles" EntityType="Self.webpages_UsersInRoles" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Detail_Employee_UserProfile" Association="Self.FK_Detail_Employee_UserProfile">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="Detail_Employee" EntitySet="Detail_Employee" />
+    </AssociationSet>
+    <AssociationSet Name="fk_RoleId" Association="Self.fk_RoleId">
+      <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="fk_UserId" Association="Self.fk_UserId">
+      <End Role="UserProfile" EntitySet="UserProfile" />
+      <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,27 @@
+﻿@model IEnumerable<OfficeEmployeeModel.Detail_Employee>
+@{
+    ViewBag.TotalRows = 3424;
+    Layout = null;
+    //var grid = new WebGrid(canPage: true, rowsPerPage: 20);
+    WebGrid webGrid = new WebGrid(canPage: true, rowsPerPage: 20);
+    webGrid.Bind(source: Model, rowCount: ViewBag.TotalRows, autoSortAndPage: true);
+    //WebGrid webGrid = new WebGrid(source: Model);
+}
+
+<p>
+    @webGrid.GetHtml(
+
+        htmlAttributes: new { @id = "WebGrid", style = "width:1200px;" },
+        //tableStyle: "grid", rowStyle: "gridrow", alternatingRowStyle: "gridrow_alternate",
+        tableStyle: "grid",
+        headerStyle: "head",
+        rowStyle:"rowstyle",
+        alternatingRowStyle: "alt",
+        columns: webGrid.Columns(
+                 webGrid.Column("vEmployeeName", "Employee Name",canSort:true, style: "col-sm"),
+                 webGrid.Column("vEmployeeMobile", "Mobile", canSort: true),
+                 webGrid.Column("vEmail", "Email", canSort: false, format: @<text><a href="mailto:@item.vEmail" target="_top">@item.vEmail</a></text>),
+                 //webGrid.Column("dHireDate", "Hire Date", item => item.dHireDate.ToString("dd/MM/yyyy HH:mm"))
+                 webGrid.Column("dHireDate", "Hire Date", canSort: true)
+))
+</p>

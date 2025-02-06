@@ -1,0 +1,3993 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql150DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="False" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="False" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="110" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="Database.dll" />
+			<Metadata Name="FileName" Value="C:\OFFICEEMPLOYEE\DATABASE\OBJ\DEBUG\DATABASE.DLL" />
+			<Metadata Name="AssemblyName" Value="Database" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\OfficeEmployee\Database\obj\Debug\Database.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiPaddingOn" Value="False" />
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Property Name="IsCursorDefaultScopeGlobal" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="RecoveryMode" Value="1" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="CompatibilityMode" Value="110" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreCaptureMode" Value="2" />
+			<Property Name="QueryStoreMaxStorageSize" Value="1000" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[((0))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[webpages_Membership]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[webpages_Membership].[IsConfirmed]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[((0))]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[webpages_Membership]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[webpages_Membership].[PasswordFailuresSinceLastSuccess]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Property Name="FillFactor" Value="80" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[webpages_UsersInRoles].[UserId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[webpages_UsersInRoles].[RoleId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[webpages_UsersInRoles]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Property Name="FillFactor" Value="80" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[webpages_Roles].[RoleId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[webpages_Roles]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Property Name="FillFactor" Value="80" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[webpages_Membership].[UserId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[webpages_Membership]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Property Name="FillFactor" Value="80" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[webpages_OAuthMembership].[Provider]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[webpages_OAuthMembership].[ProviderUserId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[webpages_OAuthMembership]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Property Name="FillFactor" Value="80" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[UserProfile].[UserId]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[UserProfile]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="9" />
+		</Element>
+		<Element Type="SqlRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[aspnet_Personalization_FullAccess]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References Name="[aspnet_Personalization_ReportingAccess]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[aspnet_Personalization_FullAccess]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References Name="[aspnet_Personalization_BasicAccess]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[aspnet_Roles_FullAccess]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References Name="[aspnet_Roles_ReportingAccess]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[aspnet_Roles_FullAccess]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References Name="[aspnet_Roles_BasicAccess]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[aspnet_Profile_FullAccess]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References Name="[aspnet_Profile_ReportingAccess]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[aspnet_Profile_FullAccess]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References Name="[aspnet_Profile_BasicAccess]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[aspnet_Membership_FullAccess]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References Name="[aspnet_Membership_ReportingAccess]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[aspnet_Membership_FullAccess]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References Name="[aspnet_Membership_BasicAccess]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlUniqueConstraint">
+			<Property Name="FillFactor" Value="80" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[webpages_Roles].[RoleName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[webpages_Roles]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="10" />
+		</Element>
+		<Element Type="SqlUniqueConstraint">
+			<Property Name="FillFactor" Value="80" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[webpages_Roles].[RoleName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[webpages_Roles]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="11" />
+		</Element>
+		<Element Type="SqlUniqueConstraint">
+			<Property Name="FillFactor" Value="80" />
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[UserProfile].[UserName]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[UserProfile]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
+		</Element>
+		<Element Type="SqlRole" Name="[aspnet_Membership_BasicAccess]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRole" Name="[aspnet_Membership_FullAccess]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRole" Name="[aspnet_Membership_ReportingAccess]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRole" Name="[aspnet_Personalization_BasicAccess]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRole" Name="[aspnet_Personalization_FullAccess]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRole" Name="[aspnet_Personalization_ReportingAccess]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRole" Name="[aspnet_Profile_BasicAccess]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRole" Name="[aspnet_Profile_FullAccess]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRole" Name="[aspnet_Profile_ReportingAccess]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRole" Name="[aspnet_Roles_BasicAccess]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRole" Name="[aspnet_Roles_FullAccess]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRole" Name="[aspnet_Roles_ReportingAccess]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlRole" Name="[aspnet_WebEvent_FullAccess]">
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlScalarFunction" Name="[dbo].[AddBusinessDays]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AddBusinessDays].[@n]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[AddBusinessDays].[@Date]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[ 
+BEGIN
+DECLARE @d INT;SET @d=4-SIGN(@n)*(4-DATEPART(DW,@Date));
+RETURN DATEADD(D,@n+((ABS(@n)+@d-2)/5)*2*SIGN(@n)-@d/7,@Date);
+END]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="209" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="CREATE FUNCTION[dbo].[AddBusinessDays](@Date date,@n INT)&#xD;&#xA;RETURNS DATE AS" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AddBusinessDays].[@Date]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[AddBusinessDays].[@n]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[date]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlScalarFunction" Name="[dbo].[DateAddExcludeWeekEndDays]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[DateAddExcludeWeekEndDays].[@numDays]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[DateAddExcludeWeekEndDays].[@addDate]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
+BEGIN
+    WHILE @numDays>0
+    BEGIN
+       SET @addDate=DATEADD(d,1,@addDate)
+       IF DATENAME(DW,@addDate)='saturday' SET @addDate=DATEADD(d,1,@addDate)
+       IF DATENAME(DW,@addDate)='sunday' SET @addDate=DATEADD(d,1,@addDate)
+  
+       SET @numDays=@numDays-1
+    END
+  
+    RETURN CAST(@addDate AS DATETIME)
+END]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="430" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="CREATE FUNCTION DateAddExcludeWeekEndDays(@addDate AS DATE, @numDays AS INT)&#xD;&#xA;RETURNS DATETIME&#xD;&#xA;AS" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[DateAddExcludeWeekEndDays].[@addDate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[DateAddExcludeWeekEndDays].[@numDays]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[datetime]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[fk_RoleId]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[webpages_UsersInRoles].[RoleId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[webpages_UsersInRoles]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[webpages_Roles].[RoleId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[webpages_Roles]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="13" />
+		</Element>
+		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[fk_UserId]">
+			<Relationship Name="Columns">
+				<Entry>
+					<References Name="[dbo].[webpages_UsersInRoles].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[webpages_UsersInRoles]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignColumns">
+				<Entry>
+					<References Name="[dbo].[UserProfile].[UserId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForeignTable">
+				<Entry>
+					<References Name="[dbo].[UserProfile]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="14" />
+		</Element>
+		<Element Type="SqlScalarFunction" Name="[dbo].[FN_ADD_WORKING_DAYS]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FN_ADD_WORKING_DAYS].[@DATE]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FN_ADD_WORKING_DAYS].[@NDAYS]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[     
+BEGIN         
+
+       IF @DATE IS NULL
+         BEGIN       
+           SET @DATE = GETDATE();
+         END
+
+       DECLARE @STARTDATE  INT  = 0
+       DECLARE @COUNT      INT  = 0
+       DECLARE @NEWDATE    DATE = DATEADD(DAY, 1, @DATE)                                         
+
+       WHILE @COUNT < @NDAYS 
+        BEGIN 
+          IF DATEPART(WEEKDAY, @NEWDATE) NOT IN (7, 1) --AND @NEWDATE NOT IN ( SELECT DT_HOLIDAY FROM TB_HOLIDAYS ) 
+            SET @COUNT += 1;
+            SELECT @NEWDATE = DATEADD(DAY, 1, @NEWDATE), @STARTDATE += 1;
+        END 
+
+        RETURN DATEADD(DAY, @STARTDATE, @DATE);
+  END]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="CreateOffset" Value="2" />
+							<Property Name="Length" Value="739" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="&#xD;&#xA;CREATE FUNCTION dbo.FN_ADD_WORKING_DAYS (&#xD;&#xA;  @DATE      DATE,&#xD;&#xA;  @NDAYS     INT   &#xD;&#xA;) RETURNS DATE" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[FN_ADD_WORKING_DAYS].[@DATE]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[FN_ADD_WORKING_DAYS].[@NDAYS]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[date]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlScalarFunction" Name="[dbo].[fn_BuildModelDescription]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[xml]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[fn_BuildModelDescription].[@cAuditOrFinal]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[fn_BuildModelDescription].[@iScanID]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
+BEGIN
+
+	DECLARE @xmlstring XML
+	declare @FieldName varchar(50)
+	declare @DynamicValue varchar(100)
+	declare @ModelDescription varchar(300)
+	declare @CurrentDescription varchar(100)
+	declare @iClassCatNumber INT
+	SET @ModelDescription = ''
+	IF @cAuditOrFinal = 'F'
+	BEGIN
+		SET @xmlstring =  
+		(
+		  SELECT   *
+		  from 
+		  InventoryAllFields4ModelDescBuild  where iScanID = @iScanID 
+		   FOR XML AUTO
+		 )
+	END
+	ELSE
+	BEGIN
+		SET @xmlstring =  
+		(
+		  SELECT   *
+		  from 
+		  InventoryAllFields4ModelDescBuild  where iScanID = @iScanID 
+		   FOR XML RAW ('InventoryAllFields4ModelDescBuild')
+		 )
+	END
+	 SET @FieldName = 'iClassCatNumber'
+	 SELECT @iClassCatNumber = 
+				Xtbl.Config.value('(@*[local-name() = sql:variable("@FieldName")])[1]', 'varchar(50)') 
+				FROM @xmlstring.nodes('/InventoryAllFields4ModelDescBuild') as Xtbl(Config)
+
+	 DECLARE @vFieldName varchar(100), @vTextBefore varchar(100), @vTextAfter varchar(100)
+	DECLARE CurBuild CURSOR FAST_FORWARD FOR         
+	SELECT vFieldName,vTextBefore,vTextAfter FROM Build_ModelDescription WHERE iClassCatNumber = @iClassCatNumber
+		AND cAuditFinal = @cAuditOrFinal
+		ORDER by iDescriptionOrder
+	OPEN CurBuild        
+	FETCH NEXT FROM CurBuild         
+	INTO @vFieldName, @vTextBefore, @vTextAfter    
+	WHILE @@FETCH_STATUS = 0        
+	BEGIN
+		SET @CurrentDescription = ''
+		IF @vFieldName IS NULL
+			SET @CurrentDescription = ISNULL(@vTextBefore,'') + '' + ISNULL(@vTextAfter,'')
+		ELSE
+		BEGIN
+			SET @FieldName = 'v' + SUBSTRING(@vFieldName,2,len(@vFieldName))
+			SELECT @DynamicValue =
+				Xtbl.Config.value('(@*[local-name() = sql:variable("@FieldName")])[1]', 'varchar(50)') 
+				FROM @xmlstring.nodes('/InventoryAllFields4ModelDescBuild') as Xtbl(Config)
+			IF ISNULL(@DynamicValue,'') !='' AND @DynamicValue NOT IN ('Missing','Not-Determined','NA','N/A')
+			BEGIN
+				IF @FieldName = 'vWebcam'
+				BEGIN
+					IF @DynamicValue = 'Y'
+						SET @CurrentDescription = 'WebCam,'
+				END
+				--ELSE IF @FieldName = 'vOSInstalled' AND ISNULL(@DynamicValue,'') like 'Win %'
+					--SET @CurrentDescription = LTRIM(RTRIM(REPLACE(ISNULL(@vTextBefore,'') + '' + Replace(ISNULL(@DynamicValue,''),'Win ', 'Windows ') + '' + ISNULL(@vTextAfter,''),'  ',' ')))
+				ELSE
+					SET @CurrentDescription = REPLACE(ISNULL(@vTextBefore,'') + '' + LTRIM(RTRIM(ISNULL(@DynamicValue,''))) + '' + ISNULL(@vTextAfter,''),'  ',' ')
+			END
+		END
+		IF ISNULL(@CurrentDescription,'') !=''
+			SET @ModelDescription = @ModelDescription + (CASE WHEN @CurrentDescription like ',%' THEN @CurrentDescription ELSE CASE WHEN @FieldName = 'vProcessorSpeed' THEN '' ELSE ' ' END + @CurrentDescription END)
+		FETCH NEXT FROM CurBuild         
+		INTO @vFieldName, @vTextBefore, @vTextAfter    
+        
+	END    
+    Close CurBuild    
+    Deallocate CurBuild 
+	select @ModelDescription = case when right(rtrim(@ModelDescription),1) = ',' then substring(rtrim(@ModelDescription),1,len(rtrim(@ModelDescription))-1) else @ModelDescription END
+	RETURN REPLACE(REPLACE(REPLACE(RTRIM(LTRIM(@ModelDescription)),'  ',' '),',,,',','),',,',',')
+END]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="3267" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="CREATE FUNCTION [dbo].[fn_BuildModelDescription]&#xD;&#xA;(&#xD;&#xA;&#x9;@iScanID INT,&#xD;&#xA;&#x9;@cAuditOrFinal char(1)&#xD;&#xA;)&#xD;&#xA;RETURNS VARCHAR(300)&#xD;&#xA;AS" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[fn_BuildModelDescription].[@iScanID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[fn_BuildModelDescription].[@cAuditOrFinal]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="1" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[char]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Property Name="Length" Value="300" />
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[varchar]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlScalarFunction" Name="[dbo].[FN_DayDiffExcludeWeekend]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FN_DayDiffExcludeWeekend].[@startdate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FN_DayDiffExcludeWeekend].[@enddate]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[     
+BEGIN         
+	DECLARE @daydifference int
+	DECLARE @totaldays INT
+	DECLARE @weekenddays INT
+	SET @daydifference = 0
+	SET @totaldays = DATEDIFF(DAY, @startDate, @endDate) 
+	SET @weekenddays = ((DATEDIFF(WEEK, @startDate, @endDate) * 2) + -- get the number of weekend days in between
+                       CASE WHEN DATEPART(WEEKDAY, @startDate) = 1 THEN 1 ELSE 0 END + -- if selection was Sunday, won't add to weekends
+                       CASE WHEN DATEPART(WEEKDAY, @endDate) = 6 THEN 1 ELSE 0 END)  -- if selection was Saturday, won't add to weekends
+
+	SET @daydifference = @totaldays - @weekenddays
+
+	RETURN @daydifference
+END]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="755" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="CREATE FUNCTION [dbo].[FN_DayDiffExcludeWeekend] (&#xD;&#xA;  @startdate date,&#xD;&#xA;  @enddate date&#xD;&#xA;) RETURNS int" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[FN_DayDiffExcludeWeekend].[@startdate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[FN_DayDiffExcludeWeekend].[@enddate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[date]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[int]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlScalarFunction" Name="[dbo].[fn_GetAuditReportDueDate]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[bit]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[bit]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[fn_GetAuditReportDueDate].[@iAuditReportDueIn]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[fn_GetAuditReportDueDate].[@ReceivingDate]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
+BEGIN
+	
+	DECLARE @RetValue DATETIME
+	--DECLARE @iAuditReportDueIn INT
+	--DECLARE @ReceivingDate DATETIME
+	declare @counter int
+	DECLARE @RETURNVALUE VARCHAR(20)
+	declare @Dayname varchar(20)
+	declare @flgdate bit
+	DECLARE @IsAuditReportRequired BIT
+
+	--SET @iAuditReportDueIn = 0
+	--SELECT @iAuditReportDueIn = ISNULL(dj.iAuditReportDueIn,0),@IsAuditReportRequired = ISNULL(dj.bIsAuditReportRequired,0) FROM Detail_Job dj WHERE iJobID = 5
+
+	--SELECT TOP 1 @ReceivingDate = dDateReceived FROM Detail_Load WHERE Detail_Load.iJobId = @IJobID ORDER BY dDateReceived ASC	
+	set @flgdate = 0
+	set @counter = @iAuditReportDueIn	
+	
+	while(@counter!=0)
+		begin--while
+		set @Dayname=datepart(dw,@ReceivingDate)					
+		if(@Dayname > 1 and @Dayname < 7) 
+			begin
+				if(@flgdate = 1)
+					set @flgdate = 0								
+				else
+					begin
+						set @ReceivingDate = 	dateadd(d,1,@ReceivingDate)							
+					end
+				set @Dayname=datename(dw,@ReceivingDate)
+				if(@Dayname ='Saturday')
+					set @ReceivingDate = 	dateadd(d,2,@ReceivingDate)
+				else if(@Dayname ='Sunday')
+					set @ReceivingDate = 	dateadd(d,1,@ReceivingDate)
+					
+				set @counter=@counter-1	
+			end				
+		else
+			begin
+			set @ReceivingDate = 	dateadd(d,1,@ReceivingDate)
+			set @flgdate=1
+		end
+	end--while	
+	
+	SET @RETURNVALUE = @ReceivingDate
+	SET @RETURNVALUE = CONVERT(VARCHAR(20),@ReceivingDate,101)
+	
+	RETURN @RETURNVALUE
+
+END]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="1584" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="CREATE FUNCTION [dbo].[fn_GetAuditReportDueDate]&#xD;&#xA;(&#xD;&#xA;&#x9;@IJobID INT,&#xD;&#xA;&#x9;@iAuditReportDueIn INT,&#xD;&#xA;&#x9;@ReceivingDate DATETIME&#xD;&#xA;)&#xD;&#xA;RETURNS VARCHAR(20)&#xD;&#xA;AS" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[fn_GetAuditReportDueDate].[@IJobID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[fn_GetAuditReportDueDate].[@iAuditReportDueIn]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[fn_GetAuditReportDueDate].[@ReceivingDate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Property Name="Length" Value="20" />
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[varchar]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlScalarFunction" Name="[dbo].[FN_GetOverallGrade]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FN_GetOverallGrade].[@FunctionalStatus]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FN_GetOverallGrade].[@Grade]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[     
+BEGIN         
+	DECLARE @OverallGrade varchar(10)
+	SET @OverallGrade = ''
+	IF @FunctionalStatus IN ('Functional','Functional-M','Functional-N') AND @Grade='A'
+		SET @OverallGrade = 'A'
+	ELSE IF (@FunctionalStatus like 'Functional%' and @Grade='B') OR (@FunctionalStatus = 'Functional-NOB' and @Grade='A')
+		SET @OverallGrade = 'B'
+	ELSE IF @FunctionalStatus like 'Functional%' and @Grade='C'
+		SET @OverallGrade = 'C'
+	ELSE IF @Grade='R'
+		SET @OverallGrade = 'R'
+	ELSE IF @FunctionalStatus = 'Non-Functional' OR @Grade='D'
+		SET @OverallGrade = 'D'
+	ELSE IF @FunctionalStatus = 'Not Tested' and @Grade='R'
+		SET @OverallGrade = 'R'
+	ELSE IF @Grade='L'
+		SET @OverallGrade = 'L'
+	ELSE IF @FunctionalStatus = 'Not Tested' AND @Grade != 'R'
+		SET @OverallGrade = 'X'
+
+	RETURN @OverallGrade
+END]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="942" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="CREATE FUNCTION [dbo].[FN_GetOverallGrade] (&#xD;&#xA;  @FunctionalStatus varchar(50),&#xD;&#xA;  @Grade varchar(20)&#xD;&#xA;) RETURNS VARCHAR(10)" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[FN_GetOverallGrade].[@FunctionalStatus]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[FN_GetOverallGrade].[@Grade]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="20" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Property Name="Length" Value="10" />
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[varchar]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlScalarFunction" Name="[dbo].[fn_GetProcessingDeadline]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[bit]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[bit]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[fn_GetProcessingDeadline].[@AllowedSubstractDays]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[fn_GetProcessingDeadline].[@AuditReportDueDeadline]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
+BEGIN
+	
+	DECLARE @RetValue DATETIME	
+	declare @counter int
+	DECLARE @RETURNVALUE VARCHAR(20)
+	declare @Dayname varchar(20)
+	declare @flgdate bit
+	DECLARE @IsAuditReportRequired BIT
+
+	
+	set @flgdate = 0
+	set @counter = @AllowedSubstractDays	
+	
+	while(@counter!=0)
+		begin--while
+		set @Dayname=datepart(dw,@AuditReportDueDeadline)					
+		if(@Dayname > 1 and @Dayname < 7) 
+			begin
+				if(@flgdate = 1)
+					set @flgdate = 0								
+				else
+					begin
+						set @AuditReportDueDeadline = 	dateadd(d,-1,@AuditReportDueDeadline)							
+					end
+				set @Dayname=datename(dw,@AuditReportDueDeadline)
+				if(@Dayname ='Saturday')
+					set @AuditReportDueDeadline = 	dateadd(d,-1,@AuditReportDueDeadline)
+				else if(@Dayname ='Sunday')
+					set @AuditReportDueDeadline = 	dateadd(d,-2,@AuditReportDueDeadline)
+					
+				set @counter=@counter-1	
+			end				
+		else
+			begin
+			set @AuditReportDueDeadline = 	dateadd(d,-1,@AuditReportDueDeadline)
+			set @flgdate=1
+		end
+	end--while	
+	
+	SET @RETURNVALUE = @AuditReportDueDeadline
+	SET @RETURNVALUE = CONVERT(VARCHAR(20),@AuditReportDueDeadline,101)
+	
+	RETURN @RETURNVALUE
+
+END]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="1309" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="CREATE FUNCTION [dbo].[fn_GetProcessingDeadline]&#xD;&#xA;(&#x9;&#xD;&#xA;&#x9;@AllowedSubstractDays INT,&#xD;&#xA;&#x9;@AuditReportDueDeadline DATETIME&#xD;&#xA;)&#xD;&#xA;RETURNS VARCHAR(20)&#xD;&#xA;AS" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[fn_GetProcessingDeadline].[@AllowedSubstractDays]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[fn_GetProcessingDeadline].[@AuditReportDueDeadline]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Property Name="Length" Value="20" />
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[varchar]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlScalarFunction" Name="[dbo].[FN_WorkTime]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[bigint]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[time]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[time]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[time]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[time]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[bigint]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FN_WorkTime].[@StartDate]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[FN_WorkTime].[@FinishDate]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[time]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[time]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
+BEGIN
+    DECLARE @Temp BIGINT
+    SET @Temp=0
+
+    DECLARE @FirstDay DATE
+    SET @FirstDay = CONVERT(DATE, @StartDate, 112)
+
+    DECLARE @LastDay DATE
+    SET @LastDay = CONVERT(DATE, @FinishDate, 112)
+
+    DECLARE @StartTime TIME
+    SET @StartTime = CONVERT(TIME, @StartDate)
+
+    DECLARE @FinishTime TIME
+    SET @FinishTime = CONVERT(TIME, @FinishDate)
+
+    DECLARE @WorkStart TIME
+    SET @WorkStart = '09:00'
+
+    DECLARE @WorkFinish TIME
+    SET @WorkFinish = '17:00'
+
+    DECLARE @DailyWorkTime BIGINT
+    SET @DailyWorkTime = DATEDIFF(MINUTE, @WorkStart, @WorkFinish)
+
+    IF (@StartTime<@WorkStart)
+    BEGIN
+        SET @StartTime = @WorkStart
+    END
+    IF (@FinishTime>@WorkFinish)
+    BEGIN
+        SET @FinishTime=@WorkFinish
+    END
+    IF (@FinishTime<@WorkStart)
+    BEGIN
+        SET @FinishTime=@WorkStart
+    END
+    IF (@StartTime>@WorkFinish)
+    BEGIN
+        SET @StartTime = @WorkFinish
+    END
+
+    DECLARE @CurrentDate DATE
+    SET @CurrentDate = @FirstDay
+    DECLARE @LastDate DATE
+    SET @LastDate = @LastDay
+
+    WHILE(@CurrentDate<=@LastDate)
+    BEGIN       
+        IF (DATEPART(dw, @CurrentDate)!=1 AND DATEPART(dw, @CurrentDate)!=7)
+        BEGIN
+            IF (@CurrentDate!=@FirstDay) AND (@CurrentDate!=@LastDay)
+            BEGIN
+                SET @Temp = @Temp + @DailyWorkTime
+            END
+            --IF it starts at startdate and it finishes not this date find diff between work finish and start as minutes
+            ELSE IF (@CurrentDate=@FirstDay) AND (@CurrentDate!=@LastDay)
+            BEGIN
+                SET @Temp = @Temp + DATEDIFF(MINUTE, @StartTime, @WorkFinish)
+            END
+
+            ELSE IF (@CurrentDate!=@FirstDay) AND (@CurrentDate=@LastDay)
+            BEGIN
+                SET @Temp = @Temp + DATEDIFF(MINUTE, @WorkStart, @FinishTime)
+            END
+            --IF it starts and finishes in the same date
+            ELSE IF (@CurrentDate=@FirstDay) AND (@CurrentDate=@LastDay)
+            BEGIN
+                SET @Temp = DATEDIFF(MINUTE, @StartTime, @FinishTime)
+            END
+        END
+        SET @CurrentDate = DATEADD(day, 1, @CurrentDate)
+    END
+
+    -- Return the result of the function
+    IF @Temp<0
+    BEGIN
+        SET @Temp=0
+    END
+    RETURN @Temp
+
+END]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="2452" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="CREATE FUNCTION FN_WorkTime&#xD;&#xA;(&#xD;&#xA;    @StartDate DATETIME,&#xD;&#xA;    @FinishDate DATETIME&#xD;&#xA;)&#xD;&#xA;RETURNS BIGINT&#xD;&#xA;AS" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[FN_WorkTime].[@StartDate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[FN_WorkTime].[@FinishDate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[bigint]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlScalarFunction" Name="[dbo].[GetDayOfWeekDate]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetDayOfWeekDate].[@WeekNumber]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetDayOfWeekDate].[@Year]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetDayOfWeekDate].[@DayOfWeek]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
+BEGIN
+    DECLARE @WeekStartDate DATE;
+    DECLARE @TargetDate DATE;
+    DECLARE @LastDateOfYear DATE;
+
+    -- Calculate the start date of the week
+    SET @WeekStartDate = DATEADD(WEEK, @WeekNumber - 1, DATEADD(YEAR, @Year - 1900, 0));
+
+    -- Find the target date based on the day of the week
+    IF @DayOfWeek BETWEEN 1 AND 7
+    BEGIN
+        SET @TargetDate = DATEADD(DAY, @DayOfWeek - DATEPART(WEEKDAY, @WeekStartDate), @WeekStartDate);
+    END
+    ELSE
+    BEGIN
+        -- Get the last date of the year
+        SET @LastDateOfYear = DATEFROMPARTS(@Year, 12, 31);
+
+        -- If the day of week is invalid, return the last day of the year within the same week
+        SET @TargetDate = DATEADD(DAY, 6 - DATEPART(WEEKDAY, @LastDateOfYear), @LastDateOfYear);
+    END
+
+    RETURN CASE WHEN YEAR(@TargetDate) != @Year then datefromparts(@Year,12,31) else @TargetDate end;
+END;]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="CreateOffset" Value="2" />
+							<Property Name="Length" Value="1019" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="&#xD;&#xA;CREATE FUNCTION GetDayOfWeekDate (&#xD;&#xA;    @WeekNumber INT,&#xD;&#xA;    @Year INT,&#xD;&#xA;    @DayOfWeek INT&#xD;&#xA;)&#xD;&#xA;RETURNS DATE&#xD;&#xA;AS" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetDayOfWeekDate].[@WeekNumber]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetDayOfWeekDate].[@Year]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetDayOfWeekDate].[@DayOfWeek]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[date]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlScalarFunction" Name="[dbo].[getNumericValue]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[getNumericValue].[@inputString]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
+BEGIN
+  DECLARE @integerPart INT
+  SET @integerPart = PATINDEX('%[^0-9]%', @inputString)
+  BEGIN
+    WHILE @integerPart > 0
+    BEGIN
+      SET @inputString = STUFF(@inputString, @integerPart, 1, '' )
+      SET @integerPart = PATINDEX('%[^0-9]%', @inputString )
+    END
+  END
+  RETURN ISNULL(@inputString,0)
+END]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="419" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="CREATE FUNCTION dbo.getNumericValue&#xD;&#xA; (&#xD;&#xA;@inputString VARCHAR(256)&#xD;&#xA;)&#xD;&#xA;RETURNS VARCHAR(256)&#xD;&#xA;AS" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[getNumericValue].[@inputString]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Property Name="Length" Value="256" />
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[varchar]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlMultiStatementTableValuedFunction" Name="[dbo].[GetProductCode]">
+			<Property Name="ReturnTableVariable" Value="@ProductCodeInformation" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[char]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[char]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetProductCode].[@ManufacturerID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetProductCode].[@CategoryID]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[GetProductCode].[@ModelNumber]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[GetProductCode].[@FunctionalStatus]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[GetProductCode].[@Grade]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[GetProductCode].[@iPlanID]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetProductCode].[@ManufacturerCode]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[GetProductCode].[@BuildAttributes]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[FN_GetOverallGrade]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[GetProductCode].[ProductCode]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[GetProductCode].[ModelPrefix]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[GetProductCode].[Specification]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[GetProductCode].[GroupCode]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[GetProductCode].[CategoryID]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[GetProductCode].[ManufacturerCode]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[GetProductCode].[CategoryCode]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="2" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[GetProductCode].[PartNumber]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[GetProductCode].[CurrentGrade]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
+begin
+	DECLARE @CategoryCode varchar(5),@AuditGrade varchar(5),@PartNumber varchar(50)
+	IF @ManufacturerID IS NULL AND @CategoryID IS NULL 
+	BEGIN
+		SELECT @ModelNumber = vMfgModelNumber,@FunctionalStatus = vFinalFunctionalStatus,@Grade = vFinalGrade,@ManufacturerID = iMfg,@CategoryID = iCategory,@AuditGrade = vAuditGrade,@PartNumber = vMfgPartNumber
+			FROM ViewAuditStandard WHERE iScanID = @iPlanID
+	END
+	IF LEN(ISNULL(@PartNUmber,'')) < 4
+		SET @PartNumber = ''
+	IF @ManufacturerCode IS NULL
+		SELECT @ManufacturerCode = vRef1 FROM Ref_Main WHERE vReferenceID = 'iMFG' AND iRefMainID = @ManufacturerID
+	IF @ManufacturerCode = ''
+		SET @ManufacturerCode = null
+	
+	DECLARE @ProductCode varchar(100), @ModelPrefix varchar(100),@Specification varchar(100),@GroupCode varchar(100)
+    SET @ProductCode = ''
+	SELECT @ProductCode = vProductCode FROM Ref_Cat WHERE iCatID = @CategoryID
+ IF ISNULL(@ProductCode,'') = ''
+	SET @ProductCode = 'XX'
+ SET @CategoryCode = @ProductCode
+ SET @ManufacturerCode = ISNULL(@ManufacturerCode,'XX')
+ IF (@CategoryID in(225,205,206,83,226)) OR (@CategoryID = 97 AND @ManufacturerID IN(315,169))  -- For Dell, HP and Lenovo Chromebooks
+	SET @ProductCode += '-' + @ManufacturerCode + '-' + ISNULL(@ModelNumber,'') + '-' + ISNULL(@PartNumber,'')
+ ELSE
+	SET @ProductCode += '-' + @ManufacturerCode + '-' + (CASE WHEN (@CategoryID in (83,205,225,86) OR (@CategoryID = 34 AND @ManufacturerID = 315)) THEN ISNULL(@PartNumber,'') ELSE ISNULL(@ModelNumber,'') END)
+ IF @CategoryID = 86 -- Monitor
+	SET @ProductCode += '-' + ISNULL(@ModelNumber,'')
+ SET @GroupCode = @ProductCode
+ IF @CategoryID in (34,97,138,205,83,225,206,226)
+ BEGIN
+	IF @BuildAttributes = 1
+	BEGIN
+		DECLARE @FormFactorNB varchar(10),@FormFactorSystem varchar(10),@CPUType varchar(10),@CPUSpeed varchar(10),@RAM varchar(10),@HDD varchar(10),@Optical varchar(10),@WebCam char(1),@OS varchar(10),
+			@Color varchar(20),@Carrier varchar(30),@TouchScreen varchar(2),@Wifi char(1)
+		
+		
+		BEGIN
+			SELECT @FormFactorNB = rmFF.vRef1,
+			@FormFactorSystem = rmFF1.vRef1,
+			@CPUType = rmCT.vRef1,
+			@CPUSpeed = rmCS.vRef1,
+			@RAM = rmMem.vRef1,
+			@HDD = rmHDD.vRef1,
+			@WebCam = acd.cWebcam,
+			@OS = rmOS.vRef1,
+			@TouchScreen = acd.cTouchScreen,
+			@Carrier = rmCar.vRef1,
+			@Color = rmCol.vRef1,
+			@Wifi = acd.cWifi
+			FROM Detail_AssetConfigDynamic acd
+			LEFT JOIN Ref_Main rmFF on acd.iType_Notebook = rmFF.iRefMainID and rmFF.vReferenceID = 'iType_Notebook'
+			LEFT JOIN Ref_Main rmFF1 on acd.iType_System = rmFF1.iRefMainID and rmFF1.vReferenceID = 'iType_System'
+			LEFT JOIN Ref_Main rmCT on acd.iProcessorType = rmCT.iRefMainID and rmCT.vReferenceID = 'iProcessorType'
+			LEFT JOIN Ref_Main rmCS on acd.iProcessorSpeed = rmCS.iRefMainID and rmCS.vReferenceID = 'iProcessorSpeed'
+			LEFT JOIN Ref_Main rmMem on acd.iMemory = rmMem.iRefMainID and rmMem.vReferenceID = 'iMemory'
+			LEFT JOIN Ref_Main rmHDD on acd.iHDDSize = rmHDD.iRefMainID and rmHDD.vReferenceID = 'iHDDSize'
+			LEFT JOIN Ref_Main rmOS on acd.iOSInstalled = rmOS.iRefMainID and rmOS.vReferenceID = 'iOSInstalled'
+			LEFT JOIN Ref_Main rmCar on acd.iMobileCarrier = rmCar.iRefMainID and rmCar.vReferenceID = 'iMobileCarrier'
+			LEFT JOIN Ref_Main rmCol on acd.iColor = rmCol.iRefMainID and rmCol.vReferenceID = 'iColor'
+			WHERE acd.cAuditFinal = 'F' and acd.iScanID = @iPlanID
+
+			IF @CategoryID in (97) -- notebook
+				SET @ProductCode += '-' + ISNULL(@FormFactorNB,'*')
+			ELSE IF @CategoryID in (83,205) --Smart/Mobile Phones and Tablet
+			BEGIN
+				SET @ProductCode += '-' + ISNULL(@HDD,'*')
+				IF @CategoryID = 83
+					SET @ProductCode += '-' + ISNULL(@Carrier,'*')
+			END
+			ELSE IF @CategoryID in (225) -- Chromebooks
+				SET @ProductCode += '-' + ISNULL(@CPUType,'*') + '-' + ISNULL(@CPUSpeed,'*') + '-' + ISNULL(@RAM,'*') + '-' + ISNULL(@HDD,'*') 
+			ELSE IF @CategoryID = 226
+				SET @ProductCode += '-' + ISNULL(@Color,'*')
+			ELSE IF @CategoryID != 206
+				SET @ProductCode += '-' + ISNULL(@FormFactorSystem,'*')
+			SET @GroupCode = @ProductCode + '-' + ISNULL(@CPUType,'*') + '-' + ISNULL(@RAM,'*') + '-' + ISNULL(@HDD,'*') + '-' + ISNULL(@OS,'*')
+			IF @CategoryID NOT IN (83,205,225,226)
+				SET @ProductCode += '-' + ISNULL(@CPUType,'*') + '-' + ISNULL(@CPUSpeed,'*') + '-' + ISNULL(@RAM,'*') + '-' + ISNULL(@HDD,'*') + '-' + ISNULL(@OS,'*')
+			IF @CategoryID IN (97,225,261) AND ISNULL(@TouchScreen,'') = 'Y'
+			BEGIN
+				SET @ProductCode += '-' + @TouchScreen
+			END
+			IF @CategoryID in (86,206)
+			BEGIN
+				IF EXISTS(SELECT 1 FROM Detail_AuditInfo WHERE iScanID = @iPlanID AND cAuditOrFinal = 'F' and iAuditInfoID = 3850 and iAuditType = 4)
+					SET @ProductCode += '-NS'
+			END
+			IF @CategoryID = 34 AND @Wifi = 'Y'
+				SET @ProductCode += '-WIFI'
+			SET @ModelPrefix = @ModelNumber + '/' + ISNULL(@CPUType,'*')
+			SET @Specification = ISNULL(@RAM,'*') + '/' + ISNULL(@HDD,'*') + '/' + ISNULL(@OS,'*')
+		END
+		
+	END
+	
+	ELSE
+	BEGIN
+		SET @ProductCode += '-*-*-*-*-*-*-*'
+		SET @GroupCode += '-*-*-*-*-*'
+	END
+ END
+ ELSE IF @CategoryID = 86 -- Monitor
+	BEGIN
+		IF @BuildAttributes = 1
+		BEGIN
+			DECLARE @ScreenSize varchar(20)
+			SELECT @ScreenSize = rmss.vDescription
+			FROM Detail_AssetConfigDynamic acd
+			LEFT JOIN Ref_Main rmSS on acd.iScreenSize = rmSS.iRefMainID and rmSS.vReferenceID = 'iScreenSize'
+			WHERE acd.cAuditFinal = 'F' and acd.iScanID = @iPlanID
+			SET @ProductCode += '-' + ISNULL(@ScreenSize,'*')
+
+			IF EXISTS(SELECT 1 FROM Detail_AuditInfo WHERE iScanID = @iPlanID AND cAuditOrFinal = 'F' and iAuditInfoID IN (3850,4186) and iAuditType = 4)
+					SET @ProductCode += '-NS'
+
+		END
+	END
+ --IF @CategoryID not in (83,205)
+ BEGIN
+	 DECLARE @OverAllGrade varchar(5)
+	 SET @OverAllGrade = dbo.FN_GetOverallGrade(@FunctionalStatus,@Grade)
+	 SET @ProductCode += '-' + @OverAllGrade
+	 SET @GroupCode += '-' + @OverAllGrade
+END
+  
+ --RETURN @ProductCode
+ INSERT @ProductCodeInformation
+        SELECT @ProductCode,@ModelPrefix,@Specification,@GroupCode,@CategoryID,@ManufacturerCode,@CategoryCode,@PartNumber,@Grade
+ RETURN;
+end]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="6696" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="CREATE function [dbo].[GetProductCode](@iPlanID INT,@ManufacturerID INT, @ManufacturerCode varchar(50),@CategoryID INT,@ModelNumber varchar(50),@FunctionalStatus varchar(50),@Grade varchar(50),@BuildAttributes BIT)&#xD;&#xA;--returns varchar(100)&#xD;&#xA;RETURNS @ProductCodeInformation TABLE &#xD;&#xA;(&#xD;&#xA;&#x9;ProductCode varchar(100),&#xD;&#xA;&#x9;ModelPrefix varchar(100),&#xD;&#xA;&#x9;Specification varchar(100),&#xD;&#xA;&#x9;GroupCode varchar(100),&#xD;&#xA;&#x9;CategoryID INT,&#xD;&#xA;&#x9;ManufacturerCode varchar(50),&#xD;&#xA;&#x9;CategoryCode varchar(2),&#xD;&#xA;&#x9;PartNumber varchar(50),&#xD;&#xA;&#x9;CurrentGrade varchar(10)&#xD;&#xA;)&#xD;&#xA;as" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetProductCode].[@iPlanID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetProductCode].[@ManufacturerID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetProductCode].[@ManufacturerCode]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetProductCode].[@CategoryID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetProductCode].[@ModelNumber]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetProductCode].[@FunctionalStatus]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetProductCode].[@Grade]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetProductCode].[@BuildAttributes]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlScalarFunction" Name="[dbo].[getSKUCode]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry />
+				<Entry />
+			</Relationship>
+			<Relationship Name="DynamicObjects">
+				<Entry>
+					<Element Type="SqlDynamicColumnSource" Name="[dbo].[getSKUCode].[CTE1].[seq]">
+						<Relationship Name="Columns">
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[getSKUCode].[CTE1].[seq].[Result]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
+BEGIN
+	DECLARE @result VARCHAR(5);
+
+	WITH seq AS
+	(
+		SELECT 
+			--ROW_NUMBER() OVER (ORDER BY x.alpha + y.number + z.number) AS Id,
+			CAST(x.alpha + y.number + z.number as varchar(3)) AS Result
+		FROM 
+			(
+				VALUES 
+				--('0'), ('1'), ('2'), ('3'), ('4'), ('5'), ('6'), ('7'), ('8'), ('9'),
+				('A'), ('B'), ('C'), ('D'), ('E'), ('F'), ('G'), ('H'), ('I'), ('J'), 
+				('K'), ('L'), ('M'), ('N'), ('O'), ('P'), ('Q'), ('R'), ('S'), ('T'), 
+				('U'), ('V'), ('W'), ('X'), ('Y'), ('Z')
+			) x(alpha),
+			(
+				VALUES 
+				(''), ('0'), ('1'), ('2'), ('3'), ('4'), ('5'), ('6'), ('7'), ('8'), ('9')
+			) y(number),
+			(
+				VALUES 
+				('0'), ('1'), ('2'), ('3'), ('4'), ('5'), ('6'), ('7'), ('8'), ('9')
+			) z(number)
+		WHERE
+			NOT (NOT x.alpha BETWEEN '1' AND '9' AND y.number = '0' AND z.number = '0')
+	)
+	SELECT	TOP 1
+			@result	= Result
+	FROM	seq
+	WHERE	NOT EXISTS 
+	(
+		SELECT	1
+		FROM	Ref_AuditInfo
+		WHERE	vSKUCode = seq.Result
+	);
+
+	RETURN @result;
+END;
+--SELECT Result FROM seq WHERE Id = (SELECT Id + 1 FROM seq WHERE Result = 'Z01')]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="1150" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="CREATE   FUNCTION dbo.getSKUCode&#xD;&#xA;(&#xD;&#xA;)&#xD;&#xA;RETURNS CHAR(5)&#xD;&#xA;AS" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Property Name="Length" Value="5" />
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[char]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlScalarFunction" Name="[dbo].[GetSSCCCode]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetSSCCCode].[@OrderID]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
+begin
+   --SET @OrderID = 
+   DECLARE @WalmartVendorID INT ,@SSCCCode varchar(20),@CheckNum INT,@TotalAtOdd INT,@TotalAtEven INT,@TotalOddEven INT
+   SET @WalmartVendorID = 613471
+   SET @SSCCCode = '00' + CONVERT(varchar(6),@WalmartVendorID) + REPLACE(STR(CONVERT(VARCHAR(9),@OrderID), 9), SPACE(1), '0')  
+   DECLARE @Counter INT
+   SET @Counter = 1
+   --print @SSCCCode
+   SET @TotalAtOdd = 0
+   SET @TotalAtEven = 0
+   WHILE @Counter <= len(@SSCCCode)
+   BEGIN
+		
+		--PRINT CONVERT(varchar(20), @Counter % 2 )
+	   IF @Counter % 2 = 1
+	   BEGIN
+		--PRINT convert(varchar(20),@Counter) + ' - ' + convert(varchar(20),CONVERT(INT,substring(@SSCCCode,@Counter,1)))
+			SET @TotalAtOdd += 	CONVERT(INT,substring(@SSCCCode,@Counter,1))
+		END
+		else
+			SET @TotalAtEven += CONVERT(INT,substring(@SSCCCode,@Counter,1))
+		
+	   SET @Counter += 1
+	END
+	--PRINT convert(varchar(20),@TotalAtOdd)
+	SET @TotalAtOdd = (@TotalAtOdd * 3)
+	SET @TotalOddEven = @TotalAtOdd + @TotalAtEven
+	DECLARE @LastNumber INT
+	SET @LastNumber = CONVERT(INT,substring(convert(varchar(20),@TotalOddEven),len(CONVERT(varchar(20),@TotalOddEven)),1))
+	IF @LastNumber = 0
+		SET @CheckNum = 0
+	ELSE
+		SET @CheckNum = 10 - @LastNumber
+	--PRINT convert(varchar(20),@CheckNum)
+	SET @SSCCCode = '00' + @SSCCCode + CONVERT(varchar(1),@CheckNum)
+	RETURN @SSCCCode
+end]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="CreateOffset" Value="2" />
+							<Property Name="Length" Value="1437" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="&#xD;&#xA;CREATE function [dbo].[GetSSCCCode](@OrderID INT)&#xD;&#xA;returns varchar(20)&#xD;&#xA;as" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetSSCCCode].[@OrderID]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Property Name="Length" Value="20" />
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[varchar]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlScalarFunction" Name="[dbo].[GetStringParts]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetStringParts].[@SplittedString]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetStringParts].[@Part]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetStringParts].[@SplitChar]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
+begin
+if(@Part < 1)
+        return '';
+    declare @Index int = 1, @Result nvarchar(300) = @SplittedString, @PatIndexResult int
+    while @Index < @Part
+    begin
+        set @PatIndexResult = PATINDEX('%' + @SplitChar + '%', @Result)
+        if(@PatIndexResult = 0)
+            return '';
+        set @Result = SUBSTRING(@Result, @PatIndexResult + 1, len(@Result));
+        set @Index = @Index + 1;
+    end
+    set @PatIndexResult = PATINDEX('%' + @SplitChar + '%', @Result);
+    if(@PatIndexResult = 0)
+        return @Result;
+    return substring(@Result, 0, patindex('%' + @SplitChar + '%', @Result));
+end]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="752" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="create FUNCTION GetStringParts(@SplittedString nvarchar(300), @Part int, @SplitChar nvarchar(1))&#xD;&#xA;Returns nvarchar(300)&#xD;&#xA;&#xD;&#xA;as" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetStringParts].[@SplittedString]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="300" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetStringParts].[@Part]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetStringParts].[@SplitChar]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="1" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Property Name="Length" Value="300" />
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlScalarFunction" Name="[dbo].[GetWeekEndDate]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetWeekStartDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetWeekEndDate].[@WeekNumber]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetWeekEndDate].[@Year]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
+BEGIN
+    DECLARE @StartDate DATE;
+    DECLARE @EndDate DATE;
+
+    -- Call the GetWeekStartDate function to get the start date of the week
+    SET @StartDate = dbo.GetWeekStartDate(@WeekNumber, @Year);
+
+    -- Calculate end date of the week
+    SET @EndDate = DATEADD(DAY, 6, @StartDate);
+
+    -- If the end date falls into the next year, adjust it to the last day of the current year
+    IF YEAR(@EndDate) > @Year
+    BEGIN
+        SET @EndDate = DATEFROMPARTS(@Year, 12, 31);
+    END
+
+    RETURN @EndDate;
+END;]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="621" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="CREATE FUNCTION GetWeekEndDate (&#xD;&#xA;    @WeekNumber INT,&#xD;&#xA;    @Year INT&#xD;&#xA;)&#xD;&#xA;RETURNS DATE&#xD;&#xA;AS" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetWeekEndDate].[@WeekNumber]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetWeekEndDate].[@Year]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[date]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlInlineTableValuedFunction" Name="[dbo].[GetWeekNumberStartEndDate]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[GetWeekNumberStartEndDate].[@fromdate]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[GetWeekNumberStartEndDate].[WeekOfMonth]" />
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[GetWeekNumberStartEndDate].[Week]" />
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[GetWeekNumberStartEndDate].[WeekStart]" />
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[GetWeekNumberStartEndDate].[WeekEnd]" />
+				</Entry>
+				<Entry>
+					<Element Type="SqlComputedColumn" Name="[dbo].[GetWeekNumberStartEndDate].[WeekFrmTo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DynamicObjects">
+				<Entry>
+					<Element Type="SqlDynamicColumnSource" Name="[dbo].[GetWeekNumberStartEndDate].[CTE1].[n]">
+						<Relationship Name="Columns">
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[GetWeekNumberStartEndDate].[CTE1].[n].[n]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlDynamicColumnSource" Name="[dbo].[GetWeekNumberStartEndDate].[CTE1].[dates]">
+						<Relationship Name="Columns">
+							<Entry>
+								<Element Type="SqlComputedColumn" Name="[dbo].[GetWeekNumberStartEndDate].[CTE1].[dates].[DateValue]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[ 
+(
+	with n as (select n from (values(0),(1),(2),(3),(4),(5),(6),(7),(8),(9)) t(n))
+	, dates as (
+	select top (datediff(day, @fromdate, dateadd(month, datediff(month, 0, @fromdate )+1, 0))) 
+    [DateValue]=convert(date,dateadd(day,row_number() over(order by (select 1))-1,@fromdate))
+	from n as deka cross join n as hecto
+	)
+	select 
+    WeekOfMonth = row_number() over (order by datepart(week,DateValue))
+	, Week        = datepart(week,DateValue)
+	, WeekStart   = min(DateValue)
+	, WeekEnd     = max(DateValue)
+	, WeekFrmTo   = convert(varchar(2),month(min(DateValue)))+'/'+convert(varchar(2),day(min(DateValue))) +'-'+ convert(varchar(2),month(max(DateValue)))+'/'+convert(varchar(2),day(max(DateValue)))
+	from dates
+	group by datepart(week,DateValue)
+)]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="CreateOffset" Value="2" />
+							<Property Name="Length" Value="871" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="&#xD;&#xA;CREATE function [dbo].[GetWeekNumberStartEndDate](@fromdate varchar(20))&#xD;&#xA;returns table as return" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetWeekNumberStartEndDate].[@fromdate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="20" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlScalarFunction" Name="[dbo].[GetWeekStartDate]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetWeekStartDate].[@Year]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetWeekStartDate].[@WeekNumber]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
+BEGIN
+    DECLARE @FirstDayOfYear DATE;
+    SET @FirstDayOfYear = DATEFROMPARTS(@Year, 1, 1);
+
+    DECLARE @StartDate DATE;
+
+    -- Calculate start date of the week
+    SET @StartDate = DATEADD(WEEK, @WeekNumber - 1, @FirstDayOfYear);
+    SET @StartDate = DATEADD(DAY, 1 - DATEPART(WEEKDAY, @StartDate), @StartDate);
+
+    -- If the start date falls into the next year, adjust it to the last day of the current year
+    IF YEAR(@StartDate) > @Year
+    BEGIN
+        SET @StartDate = DATEFROMPARTS(@Year, 12, 31);
+    END
+
+    RETURN @StartDate;
+END;]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="659" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="CREATE FUNCTION GetWeekStartDate (&#xD;&#xA;    @WeekNumber INT,&#xD;&#xA;    @Year INT&#xD;&#xA;)&#xD;&#xA;RETURNS DATE&#xD;&#xA;AS" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetWeekStartDate].[@WeekNumber]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetWeekStartDate].[@Year]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[date]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlScalarFunction" Name="[dbo].[GetWorkingHours]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[bigint]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetWorkingHours].[@StartDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetWorkingHours].[@FinishDate]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
+BEGIN
+    DECLARE @Temp BIGINT,@HolidayDate datetime,@TempStartDate datetime
+	SET @TempStartDate = @StartDate
+    SET @Temp=0
+    SET @Temp = DATEDIFF(hour,@StartDate,@FinishDate)
+	--PRINT 'FRIST:' +  Convert(varchar(20),@Temp)
+	DECLARE curHolidays CURSOR FAST_FORWARD FOR
+						SELECT dHolidayDate FROM Ref_Holidays WHERE (dHolidayDate BETWEEN CONVERT(DATE,@StartDate) AND CONVERT(DATE,@FinishDate))
+							AND DATEPART(DW,dHolidayDate) NOT IN (7,1)
+							
+					OPEN curHolidays
+					FETCH NEXT FROM curHolidays INTO @HolidayDate
+					WHILE @@FETCH_STATUS = 0
+					BEGIN 
+						IF @HolidayDate = convert(date,@StartDate) AND @HolidayDate = convert(date,@FinishDate)
+							SET @Temp = @Temp - DATEDIFF(hour,@StartDate,@FinishDate)
+						ELSE IF @HolidayDate = convert(date,@StartDate)
+						BEGIN
+							--PRINT '24-date is:' + convert(varchar(20),(24-(datepart(hour,@StartDate))))
+							SET @Temp = @Temp - (24-(datepart(hour,@StartDate)))
+						END
+						ELSE IF @HolidayDate = convert(date,@FinishDate)
+						BEGIN
+							SET @Temp = @Temp - datepart(hour,@FinishDate)
+						END
+						ELSE 
+						BEGIN
+							
+							SET @Temp = @Temp - 24
+							--PRINT 'AFTER -24 is:' +CONVERT(varchar(20), @Temp)
+						END
+						FETCH NEXT FROM curHolidays INTO @HolidayDate
+					END
+					Close curHolidays
+					Deallocate curHolidays
+	
+
+	WHILE CONVERT(DATE,@StartDate) <= CONVERT(DATE,@FinishDate)
+	BEGIN
+		IF DATEPART(DW,@StartDate) IN (7,1)
+		BEGIN
+			--PRINT 'I am here:'
+			--PRINT 'DATE DIFF: ' + CONVERT(varchar(20),DATEDIFF(hour,@StartDate,@FinishDate))
+			IF DATEDIFF(hour,@StartDate,@FinishDate) < 24
+			BEGIN
+				IF DATEDIFF(hour,@TempStartDate,@FinishDate) < 24
+					SET @Temp = @Temp - DATEDIFF(hour,@StartDate,@FinishDate)
+				ELSE
+					SET @Temp = @Temp - DATEPART(hour,@FinishDate)
+			END
+			ELSE
+				SET @Temp = @Temp - 24
+
+		END
+		SET @StartDate = DATEADD(day,1,@StartDate)
+	END
+	--PRINT Convert(varchar(20),@Temp)
+	IF @Temp <0 
+		SET @Temp = 0
+	RETURN @Temp
+
+END]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="2156" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="CREATE FUNCTION [dbo].[GetWorkingHours] &#xD;&#xA;(&#xD;&#xA;    @StartDate DATETIME,&#xD;&#xA;    @FinishDate DATETIME&#xD;&#xA;)&#xD;&#xA;RETURNS BIGINT&#xD;&#xA;AS" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetWorkingHours].[@StartDate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetWorkingHours].[@FinishDate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[bigint]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlScalarFunction" Name="[dbo].[ProperCase]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[bit]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[char]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ProperCase].[@Text]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
+begin
+   declare @Reset bit;
+   declare @Ret varchar(8000);
+   declare @i int;
+   declare @c char(1);
+
+   select @Reset = 1, @i=1, @Ret = '';
+
+   while (@i <= len(@Text))
+    select @c= substring(@Text,@i,1),
+               @Ret = @Ret + case when @Reset=1 then UPPER(@c) else LOWER(@c) end,
+               @Reset = case when @c like '[a-zA-Z]' then 0 else 1 end,
+               @i = @i +1
+   return @Ret
+end]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="501" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="create function ProperCase(@Text as varchar(8000))&#xD;&#xA;returns varchar(8000)&#xD;&#xA;as" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ProperCase].[@Text]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="8000" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Type">
+				<Entry>
+					<Element Type="SqlTypeSpecifier">
+						<Property Name="Length" Value="8000" />
+						<Relationship Name="Type">
+							<Entry>
+								<References ExternalSource="BuiltIns" Name="[varchar]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlMultiStatementTableValuedFunction" Name="[dbo].[SplitString_Custom]">
+			<Property Name="ReturnTableVariable" Value="@Result" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SplitString_Custom].[@Delimiter]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SplitString_Custom].[@String]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[SplitString_Custom].[Item]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[SplitString_Custom].[Item]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
+BEGIN
+    DECLARE @Pos INT;
+
+    WHILE CHARINDEX(@Delimiter, @String) > 0
+    BEGIN
+        SET @Pos = CHARINDEX(@Delimiter, @String);
+        INSERT INTO @Result (Item) VALUES (SUBSTRING(@String, 1, @Pos - 1));
+        SET @String = SUBSTRING(@String, @Pos + 1, LEN(@String) - @Pos);
+    END;
+
+    INSERT INTO @Result (Item) VALUES (@String);
+
+    RETURN;
+END;]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="520" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="CREATE FUNCTION dbo.SplitString_Custom&#xD;&#xA;(&#xD;&#xA;    @String NVARCHAR(MAX),&#xD;&#xA;    @Delimiter CHAR(1)&#xD;&#xA;)&#xD;&#xA;RETURNS @Result TABLE (Item NVARCHAR(MAX))&#xD;&#xA;AS" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SplitString_Custom].[@String]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[SplitString_Custom].[@Delimiter]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="1" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[char]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[suraj]">
+			<Property Name="IsQuotedIdentifierOn" Value="False" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[suraj].[id]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlMultiStatementTableValuedFunction" Name="[dbo].[ufn_CSVToTable]">
+			<Property Name="ReturnTableVariable" Value="@OutputTable" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ufn_CSVToTable].[@StringInput]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ufn_CSVToTable].[@Delimiter]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[ufn_CSVToTable].[String]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[ufn_CSVToTable].[String]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="255" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="FunctionBody">
+				<Entry>
+					<Element Type="SqlScriptFunctionImplementation">
+						<Property Name="BodyScript">
+							<Value QuotedIdentifiers="True" AnsiNulls="True"><![CDATA[
+BEGIN
+
+    DECLARE @String    VARCHAR(255)
+
+    WHILE LEN(@StringInput) > 0
+    BEGIN
+        SET @String      = LEFT(@StringInput, 
+                                ISNULL(NULLIF(CHARINDEX(@Delimiter, @StringInput) - 1, -1),
+                                LEN(@StringInput)))
+        SET @StringInput = SUBSTRING(@StringInput,
+                                     ISNULL(NULLIF(CHARINDEX(@Delimiter, @StringInput), 0),
+                                     LEN(@StringInput)) + 1, LEN(@StringInput))
+
+        INSERT INTO @OutputTable ( [String] )
+        VALUES ( @String )
+    END
+
+    RETURN
+END]]></Value>
+						</Property>
+						<Annotation Type="SysCommentsObjectAnnotation">
+							<Property Name="Length" Value="767" />
+							<Property Name="StartLine" Value="1" />
+							<Property Name="StartColumn" Value="1" />
+							<Property Name="HeaderContents" Value="CREATE FUNCTION [dbo].[ufn_CSVToTable] ( @StringInput VARCHAR(8000), @Delimiter nvarchar(1))&#xD;&#xA;RETURNS @OutputTable TABLE ( [String] VARCHAR(255) )&#xD;&#xA;AS" />
+						</Annotation>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ufn_CSVToTable].[@StringInput]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="8000" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[ufn_CSVToTable].[@Delimiter]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="1" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[UserProfile]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UserProfile].[UserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[UserProfile].[UserName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="56" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="9" />
+			<AttachedAnnotation Disambiguator="12" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[webpages_Membership]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[webpages_Membership].[UserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[webpages_Membership].[CreateDate]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[webpages_Membership].[ConfirmationToken]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="128" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[webpages_Membership].[IsConfirmed]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="3" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[webpages_Membership].[LastPasswordFailureDate]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[webpages_Membership].[PasswordFailuresSinceLastSuccess]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="4" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[webpages_Membership].[Password]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="128" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[webpages_Membership].[PasswordChangedDate]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[webpages_Membership].[PasswordSalt]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="128" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[webpages_Membership].[PasswordVerificationToken]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="128" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[webpages_Membership].[PasswordVerificationTokenExpirationDate]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="7" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[webpages_OAuthMembership]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[webpages_OAuthMembership].[Provider]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="30" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[webpages_OAuthMembership].[ProviderUserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[webpages_OAuthMembership].[UserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="8" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[webpages_Roles]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[webpages_Roles].[RoleId]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[webpages_Roles].[RoleName]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="256" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="6" />
+			<AttachedAnnotation Disambiguator="10" />
+			<AttachedAnnotation Disambiguator="11" />
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[webpages_UsersInRoles]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[webpages_UsersInRoles].[UserId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[webpages_UsersInRoles].[RoleId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<AttachedAnnotation Disambiguator="5" />
+			<AttachedAnnotation Disambiguator="13" />
+			<AttachedAnnotation Disambiguator="14" />
+		</Element>
+	</Model>
+</DataSchemaModel>
